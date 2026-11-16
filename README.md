@@ -18,6 +18,10 @@ cd ~/zlp-po-skills && ./install.sh
 
 `install.sh` tạo symlink từng skill vào `~/.claude/skills/`. Cập nhật: `cd ~/zlp-po-skills && git pull` (skill mới thì chạy lại `./install.sh`).
 
+## Cấu hình riêng
+
+`create-jira-task` cần bảng map tên → Jira username của team: `cp create-jira-task/team.local.example.md create-jira-task/team.local.md` rồi điền (file này gitignore, không bị commit).
+
 ## Yêu cầu
 
 - MCP `zalopay` đã đăng nhập Confluence/Jira.
