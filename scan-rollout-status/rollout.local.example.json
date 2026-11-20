@@ -1,0 +1,8 @@
+{
+  "confluence_base_url": "https://confluence.example.com",
+  "page_id": "<id page Confluence theo dõi rollout>",
+  "jira_server_id": "<serverId của Jira macro — lấy từ storage của một Jira macro có sẵn trên page>",
+  "teams_chat_id": "<id group Teams rollout, dạng 19:...@thread.v2>",
+  "epic_key": "<epic Jira chứa ticket tracking rollout, vd PROJ-123>",
+  "assignee": "<Jira username người được assign ticket tracking>"
+}

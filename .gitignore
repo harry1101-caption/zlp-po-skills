@@ -1,3 +1,5 @@
 team.local.md
 *.local.md
 !*.local.example.md
+*.local.json
+!*.local.example.json
