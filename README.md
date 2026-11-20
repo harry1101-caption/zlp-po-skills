@@ -10,6 +10,7 @@ Bộ Claude Code skill dùng chung cho Product Owner tại ZaloPay.
 | [create-jira-task](create-jira-task/SKILL.md) | Tạo/sửa ticket Jira PCFUM theo Change Request Template: title `[Function][Platform]`, User journey, AC Given/When/Then, custom field, sprint/epic, link ticket |
 | [teams-pending-mentions](teams-pending-mentions/SKILL.md) | Quét Teams tìm tin tag/cc mình mà chưa react/trả lời, phân loại 🔴 cần trả lời / 🟡 việc được nhờ / ⚪ FYI, soạn sẵn câu trả lời |
 | [funnel-register](funnel-register/SKILL.md) | Funnel đăng ký app (iOS/Android) kèm bước popup consent trên Superset — đếm device/ngày, bảng iOS/Android/Tổng 3 ngày gần nhất |
+| [scan-rollout-status](scan-rollout-status/SKILL.md) | Quét group Teams rollout → cập nhật dòng từng feature trên page Confluence rollout (% hiện tại, timeline, status) + comment timeline vào ticket tracking |
 
 ## Cài đặt
 
@@ -22,12 +23,15 @@ cd ~/zlp-po-skills && ./install.sh
 
 ## Cấu hình riêng
 
+`scan-rollout-status` cần ID page / group Teams / epic: `cp scan-rollout-status/rollout.local.example.json scan-rollout-status/rollout.local.json` rồi điền (gitignore).
+
 `create-jira-task` cần bảng map tên → Jira username của team: `cp create-jira-task/team.local.example.md create-jira-task/team.local.md` rồi điền (file này gitignore, không bị commit).
 
 ## Yêu cầu
 
 - MCP `zalopay` đã đăng nhập Confluence/Jira.
 - `funnel-register`: MCP `zalopay` đăng nhập site `superset`.
+- `scan-rollout-status`: MCP `zalopay` đăng nhập `teamschat`, `confluence`, `jira`; ghi page qua cookie Confluence (`zp_cookie_header`, sẽ xin phép trước).
 - `teams-pending-mentions`: MCP `zalopay` bản có tool `teams_chat_mentions`, đăng nhập site `teamschat`.
 
 ## Thêm skill mới
