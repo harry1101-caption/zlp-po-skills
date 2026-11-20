@@ -9,6 +9,7 @@ Bộ Claude Code skill dùng chung cho Product Owner tại ZaloPay.
 | [review-prd](review-prd/SKILL.md) | Review PRD (Confluence) trước khi giao dev/QC — chấm 13 tiêu chí C1–C13, xuất câu hỏi PO cần chốt |
 | [create-jira-task](create-jira-task/SKILL.md) | Tạo/sửa ticket Jira PCFUM theo Change Request Template: title `[Function][Platform]`, User journey, AC Given/When/Then, custom field, sprint/epic, link ticket |
 | [teams-pending-mentions](teams-pending-mentions/SKILL.md) | Quét Teams tìm tin tag/cc mình mà chưa react/trả lời, phân loại 🔴 cần trả lời / 🟡 việc được nhờ / ⚪ FYI, soạn sẵn câu trả lời |
+| [funnel-register](funnel-register/SKILL.md) | Funnel đăng ký app (iOS/Android) kèm bước popup consent trên Superset — đếm device/ngày, bảng iOS/Android/Tổng 3 ngày gần nhất |
 
 ## Cài đặt
 
@@ -26,6 +27,7 @@ cd ~/zlp-po-skills && ./install.sh
 ## Yêu cầu
 
 - MCP `zalopay` đã đăng nhập Confluence/Jira.
+- `funnel-register`: MCP `zalopay` đăng nhập site `superset`.
 - `teams-pending-mentions`: MCP `zalopay` bản có tool `teams_chat_mentions`, đăng nhập site `teamschat`.
 
 ## Thêm skill mới
